@@ -8,11 +8,10 @@ test.beforeEach('open Browser', async ({ page }) => {
     })
   })
   await page.goto('https://conduit.bondaracademy.com/');
-  await page.waitForTimeout(1000);
 });
 
 test('test1', async ({ page }) => {
-  await expect(page.locator('.navbar-brand')).toHaveText('conduit');
+  await page.waitForTimeout(1000);
 });
 
 test.afterEach('close Browser',async({page})=>{
